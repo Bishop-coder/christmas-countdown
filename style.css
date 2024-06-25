@@ -1,0 +1,126 @@
+*,
+*::before, 
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+:root {
+    --ff-header: "Montserrat", sans-serif;
+    --ff-p: "Open Sans", sans-serif;
+
+    --clr-bg: #acbcc5;
+    --clr-header: #ffffff;
+    --clr-time-text: transparent;
+
+    --fs-header: 4em;
+    --fs-time-text: 3.15em;
+    --fs-p: 1em;
+}
+
+body {
+    background-image: url('./imgs/martin-grazer-aQs2Lfu7tFw-unsplash.jpg');
+    background-blend-mode: multiply;
+    background-color: var(--clr-bg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main-cont {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+/* ! header */
+.heading {
+    background-color: var(--clr-header);
+    padding: 1.5em 2em;
+    width: 750px;
+    border-radius: 10px;
+}
+
+h1,
+.heading p,
+.time,
+.time-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url('./imgs/martin-grazer-aQs2Lfu7tFw-unsplash.jpg');
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    font-family: var(--ff-header);
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.heading p {
+    font-family: var(--ff-p);
+    font-weight: 600;
+    font-size: 1.75em;
+}
+
+
+/* ! time */
+.time-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 1.5em;
+    gap: 15px;
+}
+
+.block {
+    background: var(--clr-header);
+    width: calc(750px / 4 - 30px);
+    padding: 2em 0;
+    border-radius: 10px;
+}
+
+.time {
+    font-family: var(--ff-header);
+    font-size: var(--fs-time-text);
+    font-weight: 800;
+}
+
+.time-text {
+    font-family: var(--ff-p);
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+.heading, 
+.time-cont {
+    animation: page 750ms ease-in-out;
+}
+
+@keyframes page {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
